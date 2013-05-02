@@ -1,16 +1,17 @@
 import numpy as np
 
+
 def finiteDifference(x,y):
-    """takes in x parameter, function y parameter, and approximates the integral using the 2 point finite difference method"""
-    dydx=zeros(y.shape,float)#initialize array to 0s
+    """takes in x parameter, function y parameter, and approximates the derivatives using the 2 point finite difference method"""
+    dydx=np.zeros(y.shape,float)#initialize array to 0s
     dydx[1:-1]=(y[2:]-y[:-2])/(x[2:]-x[:-2])#exclude endpoints, the rest of them are [y(x+2)-y(x)]/[x2-x0], makes no (blank)ing sense
     dydx[0]=(y[1]-y[0])/(x[1]-x[0])#first term = slope
     dydx[-1]=(y[-1]-y[-2])/(x[-1]-x[-2])#slope of last term = [y(last)-y(before last]]/[x(last)-x(before)]
     return dydx
 
 def fourPtFiniteDiff(x,y):
-    """takes in x parameter, function y parameter, and approximates the integral using the 4 point finite difference method"""
-    dydx=zeros(y.shape,float)#initialize dydx array with 0s
+    """takes in x parameter, function y parameter, and approximates the derivative using the 4 point finite difference method"""
+    dydx=np.zeros(y.shape,float)#initialize dydx array with 0s
     dydx[0]=(y[1]-y[0])/(x[1]-x[0])#first term = slope
     dydx[1]=(y[2]-y[1])/(x[2]-x[1])#2nd term = slope
     dydx[-1]=(y[-1]-y[-2])/(x[-1]-x[-2])#last term= slope
