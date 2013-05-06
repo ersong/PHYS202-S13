@@ -1,4 +1,5 @@
 import numpy as np
+from scipy.interpolate import interp1d
 
 
 def finiteDifference(x,y):
@@ -19,3 +20,9 @@ def fourPtFiniteDiff(x,y):
     dydx[2:-3]=(y[0:-5]-8*y[1:-4]+8*y[3:-2]-y[4:-1])/(12*(x[3:-2]-x[2:-3]))#I never learned the 4pt Formula in Calculus BC, they teach different things
     
     return dydx
+
+def samples_mean(x,y0,N,xmin,xmax):
+    y1=interp1d(x,y0)
+    samples_x=xmin+(xmax-xmin)*random_sample(N)
+    I=(xmax-xmin)*(1/float(N))*sum(y1)
+    return I
