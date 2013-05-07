@@ -15,3 +15,10 @@ def dipolePotential(x,y,q,d,angle):
     kq=k*q
     Vxy = kq/c1-kq/c2
     return Vxy
+
+def pointField(x,y,q,Xq,Yq):
+    """Takes array (x,y), charge q, and position Xq,Yq, and returns tuple (Ex,Ey)"""
+    k=8.98e9
+    Ex=k*q*(x-Xq)/((x-Xq)**2+(y-Yq)**2)**.5
+    Ey=k*q*(y-Yq)/((x-Xq)**2+(y-Yq)**2)**.5
+    return (sum(Ex),sum(Ey))
