@@ -1,0 +1,9 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+<title>Redirect</title>
+</head><body><div style="margin-top: 3em; margin-left:auto; margin-right:auto; text-align:center;">This page should automatically redirect. If nothing is happening please use the continue link below.<br /><a href="https://polylearn.calpoly.edu/AY_2012-2013/pluginfile.php/373066/mod_resource/content/1/SimplePendulum.nb">Continue</a></div><script type="text/javascript">if(!NREUMQ.f){NREUMQ.f=function(){NREUMQ.push(["load",new Date().getTime()]);var e=document.createElement("script");e.type="text/javascript";e.src=(("http:"===document.location.protocol)?"http:":"https:")+"//"+"d1ros97qkrwjf5.cloudfront.net/42/eum/rum.js";document.body.appendChild(e);if(NREUMQ.a)NREUMQ.a();};NREUMQ.a=window.onload;window.onload=NREUMQ.f;};NREUMQ.push(["nrfj","beacon-3.newrelic.com","4e34bbaf17","1977984","YldTYBRYXUVVURdZXFsdZEYPFlJGREFMXVxaVl1RSU5EQRtzOm8BBQMDGVQJAgUbXwxUHEdXQlsTS1BTG0QKVUQbQllE",0,133,new Date().getTime(),"","","","",""]);</script>
+</body></html>
