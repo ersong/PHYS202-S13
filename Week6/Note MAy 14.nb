@@ -1,0 +1,141 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3965,        132]
+NotebookOptionsPosition[      3656,        117]
+NotebookOutlinePosition[      3993,        132]
+CellTagsIndexPosition[      3950,        129]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.577560364246344*^9, 3.577560365224347*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"g", "=", "9.8"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"l", "=", ".5"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"omega", "=", 
+   SqrtBox[
+    RowBox[{"g", "/", "l"}]]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"th0", "=", 
+   RowBox[{"20", "*", 
+    RowBox[{"\[DoubledPi]", "/", "180"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"om0", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"oed1", "=", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"th", "''"}], "[", "t", "]"}], "=", 
+      RowBox[{
+       RowBox[{"-", 
+        RowBox[{"(", 
+         RowBox[{"g", "/", "l"}], ")"}]}], 
+       RowBox[{"Sin", "[", 
+        RowBox[{"th", "[", "t", "]"}], "]"}]}]}], ",", 
+     RowBox[{
+      RowBox[{"th", "[", "0", "]"}], "=", "e0"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"th", "'"}], "[", "0", "]"}], "=", "om0"}]}], ")"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sol", "=", 
+   RowBox[{"NDSolve", "[", 
+    RowBox[{"ode1", ",", "th", ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", "20"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"approx", "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"180", "/", "Pi"}], ")"}], "th0", "*", 
+    RowBox[{"Cos", "[", 
+     RowBox[{"omega", "*", "t"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"myplot", "=", 
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"approx", ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"180", "/", "Pi"}], ")"}], 
+         RowBox[{"th", "[", "t", "]"}]}], "/.", "sol"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", "20"}], "}"}], ",", " ", 
+     RowBox[{"PlotStyle", " ", "\[Rule]", " ", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", "Blue", "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"Dashed", ",", "Red"}], "}"}]}], "}"}]}], ",", " ", 
+     RowBox[{"AxesLabel", "\[Rule]", " ", 
+      RowBox[{"{", 
+       RowBox[{"\"\<t (s)\>\"", ",", " ", "\"\<th (rad)\>\""}], "}"}]}], ",", 
+     " ", 
+     RowBox[{"PlotRange", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "10"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "20"}], ",", "20"}], "}"}]}], "}"}]}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"500", ",", "300"}], "}"}]}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.577560224941257*^9, 3.577560261102179*^9}, {
+   3.577560312023404*^9, 3.577560714707487*^9}, {3.577560751783173*^9, 
+   3.577560775544547*^9}, {3.577561133051409*^9, 3.577561143856015*^9}, 
+   3.577562052242585*^9},
+ EmphasizeSyntaxErrors->True],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.577560291557925*^9, 3.5775603015376863`*^9}, 
+   3.5775619567959948`*^9},
+ EmphasizeSyntaxErrors->True]
+},
+WindowSize->{740, 623},
+WindowMargins->{{158, Automatic}, {63, Automatic}},
+FrontEndVersion->"8.0 for Linux x86 (64-bit) (October 10, 2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 92, 1, 29, "Input"],
+Cell[652, 23, 2845, 87, 238, "Input"],
+Cell[3500, 112, 152, 3, 29, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
