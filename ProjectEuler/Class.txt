@@ -1,1 +1,5 @@
 PE 1,6,19,4,25,20,31
+
+Finals
+MON 8-11am MU 229
+Fri 10-1 PHYS 212, 1-4 MATH 418
